@@ -1,0 +1,14 @@
+{
+  "name": "flowy",
+  "version": "1.0.0",
+  "main": "engine/flow.js",
+  "repository": "https://github.com/KuriharaJun/flowy.git",
+  "author": "Kurihara Jun <lh182051+src@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.2.0",
+    "typescript": "^3.9.5"
+  }
+}
