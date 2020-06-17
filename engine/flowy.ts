@@ -1,5 +1,6 @@
+
 export class flowy {
-    loaded: boolean;
+    loaded = false
     canvas: Element;
     spacingX: number;
     spacingY: number;
@@ -40,9 +41,18 @@ export class flowy {
         el.classList.add("indicator");
         el.classList.add("invisible");
         this.canvas.appendChild(el);
+        document.addEventListener("mousedown", this.touchblock, false);
+        document.addEventListener("touchstart", this.touchblock, false);
+        document.addEventListener("mouseup", this.touchblock, false);
+        document.addEventListener("mousedown", this.beginDrag);
+        document.addEventListener("touchstart", this.beginTouch);
+        document.addEventListener("mouseup", this.endDrag, false);
+        document.addEventListener("touchend", this.touchEnd, false);
+        document.addEventListener("mousemove", this.moveBlock, false);
+        document.addEventListener("touchmove", this.moveBlock, false);
     }
 
-    import(output: FlowchartData): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    import(output: FlowchartData): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
@@ -53,31 +63,39 @@ export class flowy {
         return;
     }
 
-    beginDrag(event: MouseEvent): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    beginDrag(event: MouseEvent): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
+    }
+
+    beginTouch(event: TouchEvent): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+
     }
 
     touchDone(): void {
         return;
     }
 
-    endDrag(event: MouseEvent): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    endDrag(event: MouseEvent): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
-    moveBlock(event: UIEvent): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+
+    touchEnd(event: TouchEvent): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
+    }
+
+    moveBlock(event: UIEvent): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
-    private snap(drag: Element, i: Any, blocko: Any): void {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    private snap(drag: Element, i: any, blocko: any): void { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
-    private touchblock(event: UIEvent) {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    private touchblock(event: UIEvent) { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
-    private hasParentClass(element: Element, className: string) {/* eslint-disable-line @typescript-eslint/no-unused-vars */
+    private hasParentClass(element: Element, className: string) { /* eslint-disable-line @typescript-eslint/no-unused-vars */
         return;
     }
 
